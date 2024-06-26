@@ -1,7 +1,8 @@
 import re
 import nltk
+import sys
 
-class Predicate_Logic_Parser:
+class PredicateLogicParser:
     def __init__(self) -> None:
         self.operators = ['⊕', '∨', '∧', '→', '↔', '∀', '∃', '¬', '(', ')', ',']
         self.symbol_regex = re.compile(r'[^⊕∨∧→↔∀∃¬(),]+')
@@ -17,11 +18,12 @@ class Predicate_Logic_Parser:
         QUANT -> '∀' | '∃'
         """
 
+    # Convert the input string into tree
     def text_to_tree(self, rules):
-        rules = self.reorder_quantifiers(rules)
+       # rules = self.reorder_quantifiers(rules)
 
         r, parsed_string = self.split(rules)
-        cfg_string = self.make_cfg_str(r)
+        cfg_string = self.make_cfg_string(r)
 
         grammar = nltk.CFG.fromstring(cfg_string)
         parser = nltk.ChartParser(grammar)
@@ -39,11 +41,11 @@ class Predicate_Logic_Parser:
         for operator in self.operators:
             s = s.replace(operator, ' %s ' % operator)
         r = [e.strip() for e in s.split()]
-        # Remove ' from string if it contains any: causes an error in cfg parsing
+        # Removes apostrophes from string if it contains any. Causes an error with parsing cfg string
         r = [e.replace('\'', '') for e in r]
         r = [e for e in r if e != '']
 
-        # Get rid of spaces (e.g., convert "Predicate Logic Parser" to "PredicateLogicParser")
+        # Get rid of spaces
         result = []
         current_string_list = []
         for e in r:
@@ -75,7 +77,8 @@ class Predicate_Logic_Parser:
 
         return result, ''.join(string_list)
 
-    def make_cfg_str(self, token_list):
+    # Join the list of tokens into a string
+    def make_cfg_string(self, token_list):
         symbol_list = list(set([e for e in token_list if self.symbol_regex.match(e)]))
         symbol_string = ' | '.join(["'%s'" % s for s in symbol_list])
         cfg_string = self.cfg_template + 'VAR -> %s\nPRED -> %s\nCONST -> %s' % (
@@ -94,12 +97,12 @@ class Predicate_Logic_Parser:
             self.find_variables(variable, child)
 
     def resolve_symbols(self, tree):
-        literals, constants, predicates = set(), set(), set()
-        self.find_variables(literals, tree)
-        self.resolve_preorder(tree, literals, constants, predicates)
-        return literals, constants, predicates
+        variables, constants, predicates = set(), set(), set()
+        self.find_variables(variables, tree)
+        self.resolve_preorder(tree, variables, constants, predicates)
+        return variables, constants, predicates
 
-    def resolve_preorder(self, tree, literals, constants, predicates):
+    def resolve_preorder(self, tree, variables, constants, predicates):
         # Terminal nodes?
         if isinstance(tree, str):
             return
@@ -109,16 +112,16 @@ class Predicate_Logic_Parser:
             return
 
         if tree.label() == 'TERM':
-            sym = tree[0][0]
-            if sym in literals:
+            symbol = tree[0][0]
+            if symbol in variables:
                 tree[0].set_label('VAR')
             else:
                 tree[0].set_label('CONST')
-                constants.add(sym)
+                constants.add(symbol)
             return
 
         for child in tree:
-            self.resolve_preorder(child, literals, constants, predicates)
+            self.resolve_preorder(child, variables, constants, predicates)
 
 if __name__ == '__main__':
     print("Here are some examples of well-formed formulas (WFFs):\n"
@@ -126,15 +129,20 @@ if __name__ == '__main__':
           "∀x(Athlete(x) ∧ WinsGold(x, olympics) → OlympicChampion(x))\n"
           "¬∀x∃x(Movie(x) → HappyEnding(x))\n"
           "¬Divides(x,y) ∧ Divides(x,y)")
-    argument = str(input("Enter a WFF:\n"))
 
-    parser = Predicate_Logic_Parser()
+    while True:
+        user_input = str(input("Enter a WFF (or enter 'q' to exit):\n"))
 
-    tree = parser.text_to_tree(argument)
-    print(tree)
-    tree.pretty_print()
+        if user_input == 'q':
+            sys.exit("Quitting program...")
+        else:
+            parser = PredicateLogicParser()
 
-    literals, constants, predicates = parser.resolve_symbols(tree)
-    print('Literals: ', literals)
-    print('Constants: ', constants)
-    print('Predicates: ', predicates)
+            tree = parser.text_to_tree(user_input)
+            # print(tree) # Uncomment to print unformatted tree
+            tree.pretty_print()
+
+            variables, constants, predicates = parser.resolve_symbols(tree)
+            print('Variables: ', variables)
+            print('Constants: ', constants)
+            print('Predicates: ', predicates)
