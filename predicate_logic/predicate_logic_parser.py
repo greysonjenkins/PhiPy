@@ -20,7 +20,7 @@ class Predicate_Logic_Parser:
     def text_to_tree(self, rules):
         rules = self.reorder_quantifiers(rules)
 
-        r, parsed_string = self.msplit(rules)
+        r, parsed_string = self.split(rules)
         cfg_string = self.make_cfg_str(r)
 
         grammar = nltk.CFG.fromstring(cfg_string)
@@ -35,9 +35,9 @@ class Predicate_Logic_Parser:
             rules = '%s ' % match + rules.replace(match, '', 1)
         return rules
 
-    def msplit(self, s):
-        for op in self.operators:
-            s = s.replace(op, ' %s ' % op)
+    def split(self, s):
+        for operator in self.operators:
+            s = s.replace(operator, ' %s ' % operator)
         r = [e.strip() for e in s.split()]
         # Remove ' from string if it contains any: causes an error in cfg parsing
         r = [e.replace('\'', '') for e in r]
@@ -65,7 +65,6 @@ class Predicate_Logic_Parser:
                 string_list.append(' %s ' % e)
             elif re.match(r',', e):
                 string_list.append('%s ' % e)
-            # a logical variable
             elif (len(e) == 1) and re.match(r'\w', e):
                 if ((index - 1) >= 0) and ((r[index - 1] == '∃') or (r[index - 1] == '∀')):
                     string_list.append('%s ' % e)
