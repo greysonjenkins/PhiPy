@@ -1,14 +1,11 @@
 import re
 import nltk
 
-
 class Predicate_Logic_Parser:
     def __init__(self) -> None:
         self.operators = ['⊕', '∨', '∧', '→', '↔', '∀', '∃', '¬', '(', ')', ',']
         self.symbol_regex = re.compile(r'[^⊕∨∧→↔∀∃¬(),]+')
-        """
 
-        """
         self.cfg_template = """
         S -> F | Q F | '¬' S | '(' S ')'
         Q -> QUANT VAR | QUANT VAR Q
@@ -123,7 +120,6 @@ class Predicate_Logic_Parser:
 
         for child in tree:
             self.resolve_preorder(child, literals, constants, predicates)
-
 
 if __name__ == '__main__':
     print("Here are some examples of well-formed formulas (WFFs):\n"
