@@ -48,7 +48,7 @@ class PredicateFormula:
         template = self.tree.copy(deep=True)
         mappings = {}
         for i, f in enumerate(self.predicates):
-            mappings[f] = 'F%d' % i
+            mappings[f] = 'P%d' % i
         for i, f in enumerate(self.constants):
             mappings[f] = 'C%d' % i
 
@@ -74,10 +74,11 @@ if __name__ == '__main__':
             predicate_rule = PredicateFormula(user_input)
             if predicate_rule.is_wff:
                 print("Rule:", predicate_rule)
-                print("Well-Formed Formula:", predicate_rule.is_wff)
                 print("Variables:", predicate_rule.variables)
                 print("Constants:", predicate_rule.constants)
                 print("Predicates:", predicate_rule.predicates)
                 mappings, template = predicate_rule.get_formula_template()
                 print("Template:", template)
                 print("Mappings:", mappings)
+            else:
+                print("Error: Not a well-formed formula.")

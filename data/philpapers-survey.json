@@ -1,0 +1,624 @@
+{
+  "a_priori_knowledge": {
+    "yes": 72.8,
+    "no": 18.5,
+    "other": 8.7
+  },
+  "abstract_objects": {
+    "platonism": 38.4,
+    "nominalism": 41.9,
+    "other": 19.7
+  },
+  "aesthetic_value": {
+    "objective": 43.5,
+    "subjective": 40.6,
+    "other": 18.9
+  },
+  "aim_of_philosophy": {
+    "truth_knowledge": 42.2,
+    "understanding": 55.8,
+    "wisdom": 31.2,
+    "happiness": 12.6,
+    "goodness_justice": 22.7,
+    "other": 10.8
+  },
+  "analytic_synthetic_distinction": {
+    "yes": 62.5,
+    "no": 25.8,
+    "other": 11.9
+  },
+  "eating_animals_and_animal_products": {
+    "omnivorism": 48.0,
+    "vegetarianism": 26.5,
+    "veganism": 18.4,
+    "other": 9.9
+  },
+  "epistemic_justification": {
+    "internalism": 35.7,
+    "externalism": 50.5,
+    "other": 18.0
+  },
+  "experience_machine": {
+    "yes": 13.3,
+    "no": 76.9,
+    "other": 9.7
+  },
+  "external_world": {
+    "idealism": 6.6,
+    "skepticism": 5.4,
+    "non_skeptical_realism": 79.5,
+    "other": 9.8
+  },
+  "footbridge": {
+    "push": 22.0,
+    "dont_push": 56.0,
+    "other": 22.0
+  },
+  "free_will": {
+    "compatibilism": 59.2,
+    "libertarianism": 18.8,
+    "no_free_will": 11.2,
+    "other": 11.4
+  },
+  "gender": {
+    "biological": 29.0,
+    "psychological": 21.5,
+    "social": 63.1,
+    "unreal": 4.2,
+    "other": 14.8
+  },
+  "god": {
+    "theism": 18.9,
+    "atheism": 66.9,
+    "other": 14.0
+  },
+  "knowledge_claims": {
+    "contextualism": 54.6,
+    "relativism": 5.4,
+    "invariantism": 25.5,
+    "other": 16.4
+  },
+  "knowledge": {
+    "empiricism": 43.9,
+    "rationalism": 33.5,
+    "other": 27.6
+  },
+  "laws_of_nature": {
+    "humean": 31.3,
+    "non_humean": 54.3,
+    "other": 14.9
+  },
+  "logic": {
+    "classical": 53.6,
+    "non_classical": 26.4,
+    "other": 24.2
+  },
+  "meaning_of_life": {
+    "subjective": 33.0,
+    "objective": 32.1,
+    "nonexistent": 16.1,
+    "other": 23.6
+  },
+  "mental_content": {
+    "internalism": 26.4,
+    "externalism": 58.1,
+    "other": 19.6
+  },
+  "meta_ethics": {
+    "moral_realism": 62.1,
+    "moral_anti_realism": 26.1,
+    "other": 11.8
+  },
+  "metaphilosophy": {
+    "naturalism": 50.2,
+    "non_naturalism": 31.1,
+    "other": 19.1
+  },
+  "mind": {
+    "physicalism": 51.9,
+    "non_physicalism": 32.1,
+    "other": 15.9
+  },
+  "moral_judgment": {
+    "cognitivism": 69.3,
+    "non_cognitivism": 20.7,
+    "other": 10.3
+  },
+  "moral_motivation": {
+    "internalism": 41.0,
+    "externalism": 39.3,
+    "other": 22.0
+  },
+  "newcombs_problem": {
+    "one_box": 31.2,
+    "two_boxes": 39.0,
+    "other": 30.2
+  },
+  "normative_ethics": {
+    "deontology": 32.1,
+    "consequentialism": 30.6,
+    "virtue_ethics": 37.0,
+    "other": 18.2
+  },
+  "perceptual_experience": {
+    "disjunctivism": 15.6,
+    "qualia_theory": 15.1,
+    "representationalism": 39.3,
+    "sense_datum_theory": 5.0,
+    "other": 28.1
+  },
+  "personal_identity": {
+    "biological_view": 19.1,
+    "psychological_view": 43.7,
+    "further_fact_view": 14.9,
+    "other": 26.6
+  },
+  "philosophical_progress": {
+    "none": 3.8,
+    "a_little": 46.6,
+    "a_lot": 41.7,
+    "other": 8.4
+  },
+  "political_philosophy": {
+    "communitarianism": 27.3,
+    "egalitarianism": 44.0,
+    "libertarianism": 13.4,
+    "other": 20.5
+  },
+  "proper_names": {
+    "fregean": 36.1,
+    "millian": 38.7,
+    "other": 25.5
+  },
+  "race": {
+    "biological": 18.7,
+    "social": 63.4,
+    "unreal": 15.0,
+    "other": 13.3
+  },
+  "science": {
+    "scientific_realism": 72.4,
+    "scientific_anti_realism": 15.0,
+    "other": 12.8
+  },
+  "teletransporter": {
+    "survival": 35.2,
+    "death": 40.1,
+    "other": 24.8
+  },
+  "time": {
+    "a_theory": 27.2,
+    "b_theory": 38.2,
+    "other": 36.2
+  },
+  "trolley_problem": {
+    "switch": 63.4,
+    "dont_switch": 13.3,
+    "other": 23.4
+  },
+  "truth": {
+    "correspondence": 51.4,
+    "deflationary": 24.5,
+    "epistemic": 10.2,
+    "other": 16.8
+  },
+  "vagueness": {
+    "epistemic": 24.2,
+    "metaphysical": 20.8,
+    "semantic": 52.1,
+    "other": 15.6
+  },
+  "zombies": {
+    "inconceivable": 16.4,
+    "conceivable_but_not_possible": 36.5,
+    "metaphysically_possible": 24.4,
+    "other": 22.5
+  },
+  "abortion": {
+    "permissible": 81.7,
+    "impermissible": 13.1,
+    "other": 5.4
+  },
+  "aesthetic_experience": {
+    "perception": 28.2,
+    "pleasure": 14.2,
+    "sui_generis": 37.2,
+    "other": 24.4
+  },
+  "analysis_of_knowledge": {
+    "justified_true_belief": 23.6,
+    "other_analysis": 32.2,
+    "no_analysis": 30.6,
+    "other": 13.9
+  },
+  "arguments_for_theism": {
+    "cosmological": 20.9,
+    "design": 17.7,
+    "ontological": 8.9,
+    "pragmatic": 14.2,
+    "moral": 9.4,
+    "other": 25.2
+  },
+  "belief_or_credence": {
+    "belief": 30.6,
+    "credence": 31.3,
+    "neither": 19.5,
+    "other": 19.3
+  },
+  "capital_punishment": {
+    "permissible": 17.7,
+    "impermissible": 75.1,
+    "other": 7.1
+  },
+  "causation": {
+    "counterfactual_difference_making": 37.2,
+    "process_production": 22.5,
+    "primitive": 20.5,
+    "nonexistent": 4.1,
+    "other": 20.6
+  },
+  "chinese_room": {
+    "understands": 17.8,
+    "doesnt_understand": 67.1,
+    "other": 14.9
+  },
+  "concepts": {
+    "nativism": 28.1,
+    "empiricism": 50.3,
+    "other": 25.1
+  },
+  "consciousness": {
+    "dualism": 22.0,
+    "eliminativism": 4.5,
+    "functionalism": 33.0,
+    "identity_theory": 13.3,
+    "panpsychism": 7.5,
+    "other": 22.7
+  },
+  "continuum_hypothesis": {
+    "determinate": 37.7,
+    "indeterminate": 28.7,
+    "other": 33.7
+  },
+  "cosmological_fine_tuning": {
+    "design": 17.3,
+    "multiverse": 15.1,
+    "brute_fact": 32.1,
+    "no_fine_tuning": 21.7,
+    "other": 17.8
+  },
+  "environmental_ethics": {
+    "anthropocentric": 42.2,
+    "non_anthropocentric": 50.7,
+    "other": 8.9
+  },
+  "extended_mind": {
+    "yes": 51.3,
+    "no": 37.1,
+    "other": 11.8
+  },
+  "foundations_of_mathematics": {
+    "constructivism_intuitionism": 15.3,
+    "formalism": 6.2,
+    "logicism": 11.8,
+    "structuralism": 21.2,
+    "set_theoretic": 15.3,
+    "other": 34.3
+  },
+  "gender_categories": {
+    "preserve": 20.4,
+    "revise": 50.9,
+    "eliminate": 16.3,
+    "other": 15.3
+  },
+  "grounds_of_intentionality": {
+    "causal_teleological": 34.7,
+    "inferential": 9.5,
+    "interpretational": 15.1,
+    "phenomenal": 12.6,
+    "primitive": 13.7,
+    "other": 22.3
+  },
+  "hard_problem_of_consciousness": {
+    "yes": 62.4,
+    "no": 29.8,
+    "other": 7.9
+  },
+  "human_genetic_engineering": {
+    "permissible": 64.2,
+    "impermissible": 19.5,
+    "other": 16.1
+  },
+  "hume": {
+    "skeptic": 36.5,
+    "naturalist": 54.9,
+    "other": 15.8
+  },
+  "immortality": {
+    "yes": 44.9,
+    "no": 41.3,
+    "other": 13.6
+  },
+  "interlevel_metaphysics": {
+    "grounding": 29.1,
+    "identity": 11.5,
+    "realization": 21.0,
+    "supervenience": 24.7,
+    "other": 28.3
+  },
+  "justification": {
+    "coherentism": 23.7,
+    "infinitism": 2.0,
+    "nonreliabilist_foundationalism": 25.2,
+    "reliabilism": 33.6,
+    "other": 21.8
+  },
+  "kant": {
+    "one_world": 45.4,
+    "two_worlds": 34.9,
+    "other": 20.1
+  },
+  "law": {
+    "legal_positivism": 39.5,
+    "legal_non_positivism": 45.0,
+    "other": 16.0
+  },
+  "material_composition": {
+    "nihilism": 8.2,
+    "restrictivism": 35.0,
+    "universalism": 27.4,
+    "other": 30.1
+  },
+  "metaontology": {
+    "heavyweight_realism": 38.6,
+    "deflationary_realism": 28.1,
+    "anti_realism": 11.9,
+    "other": 21.6
+  },
+  "method_in_history_of_philosophy": {
+    "analytic_rational_reconstruction": 60.8,
+    "contextual_historicist": 44.4,
+    "other": 12.0
+  },
+  "method_in_political_philosophy": {
+    "ideal_theory": 32.4,
+    "non_ideal_theory": 58.0,
+    "other": 18.8
+  },
+  "mind_uploading": {
+    "survival": 27.5,
+    "death": 54.2,
+    "other": 18.4
+  },
+  "moral_principles": {
+    "moral_generalism": 54.6,
+    "moral_particularism": 33.7,
+    "other": 12.9
+  },
+  "morality": {
+    "non_naturalism": 26.6,
+    "naturalist_realism": 31.6,
+    "constructivism": 20.8,
+    "expressivism": 10.6,
+    "error_theory": 5.3,
+    "other": 11.6
+  },
+  "normative_concepts": {
+    "fit": 7.3,
+    "ought": 14.2,
+    "reasons": 25.4,
+    "value": 37.4,
+    "other": 24.5
+  },
+  "ought_implies_can": {
+    "yes": 62.9,
+    "no": 28.3,
+    "other": 9.0
+  },
+  "philosophical_knowledge": {
+    "none": 3.6,
+    "a_little": 32.5,
+    "a_lot": 56.2,
+    "other": 8.1
+  },
+  "plato": {
+    "knowledge_only_of_forms": 52.8,
+    "knowledge_also_of_concrete_things": 28.2,
+    "other": 19.2
+  },
+  "politics": {
+    "capitalism": 29.5,
+    "socialism": 53.0,
+    "other": 19.3
+  },
+  "possible_worlds": {
+    "abstract": 54.8,
+    "concrete": 4.6,
+    "nonexistent": 30.0,
+    "other": 10.9
+  },
+  "practical_reason": {
+    "aristotelian": 38.7,
+    "humean": 30.6,
+    "kantian": 18.9,
+    "other": 16.1
+  },
+  "principle_of_sufficient_reason": {
+    "true": 35.9,
+    "false": 45.7,
+    "other": 18.5
+  },
+  "properties": {
+    "classes": 11.5,
+    "immanent_universals": 20.6,
+    "transcendent_universals": 19.8,
+    "tropes": 15.3,
+    "nonexistent": 8.1,
+    "other": 29.1
+  },
+  "propositional_attitudes": {
+    "dispositional": 31.5,
+    "phenomenal": 6.9,
+    "representational": 46.5,
+    "nonexistent": 3.5,
+    "other": 18.9
+  },
+  "propositions": {
+    "sets": 8.4,
+    "structured_entities": 38.3,
+    "simple_entities": 6.9,
+    "acts": 8.1,
+    "nonexistent": 15.4,
+    "other": 25.0
+  },
+  "quantum_mechanics": {
+    "collapse": 17.1,
+    "hidden_variables": 21.9,
+    "many_worlds": 19.4,
+    "epistemic": 12.8,
+    "other": 32.0
+  },
+  "race_categories": {
+    "preserve": 8.2,
+    "revise": 32.3,
+    "eliminate": 40.4,
+    "other": 20.8
+  },
+  "rational_disagreement": {
+    "non_permissivism": 19.4,
+    "permissivism": 70.2,
+    "other": 10.5
+  },
+  "response_to_external_world_skepticism": {
+    "abductive": 22.1,
+    "contextualist": 10.7,
+    "dogmatist": 13.4,
+    "epistemic_externalist": 18.9,
+    "semantic_externalist": 8.4,
+    "pragmatic": 22.8,
+    "other": 17.2
+  },
+  "semantic_content": {
+    "minimalism": 9.4,
+    "moderate_contextualism": 52.5,
+    "radical_contextualism": 25.5,
+    "other": 13.1
+  },
+  "sleeping_beauty": {
+    "one_third": 27.7,
+    "one_half": 18.6,
+    "other": 53.4
+  },
+  "spacetime": {
+    "relationism": 45.4,
+    "substantivalism": 27.5,
+    "other": 27.0
+  },
+  "statue_and_lump": {
+    "one_thing": 30.1,
+    "two_things": 41.8,
+    "other": 28.1
+  },
+  "temporal_ontology": {
+    "presentism": 18.4,
+    "eternalism": 39.9,
+    "growing_block": 17.0,
+    "other": 24.9
+  },
+  "theory_of_reference": {
+    "causal": 46.3,
+    "descriptive": 22.1,
+    "deflationary": 15.1,
+    "other": 21.6
+  },
+  "time_travel": {
+    "metaphysically_possible": 42.3,
+    "metaphysically_impossible": 41.0,
+    "other": 16.7
+  },
+  "true_contradictions": {
+    "impossible": 71.4,
+    "possible_but_non_actual": 4.8,
+    "actual": 12.4,
+    "other": 11.7
+  },
+  "units_of_selection": {
+    "genes": 43.5,
+    "organisms": 43.1,
+    "other": 23.3
+  },
+  "values_in_science": {
+    "necessarily_value_free": 17.7,
+    "necessarily_value_laden": 44.0,
+    "can_be_either": 31.1,
+    "other": 7.2
+  },
+  "well_being": {
+    "hedonism_experientialism": 12.7,
+    "desire_satisfaction": 18.6,
+    "objective_list": 53.2,
+    "other": 20.1
+  },
+  "wittgenstein": {
+    "early": 24.6,
+    "late": 57.5,
+    "other": 17.2
+  },
+  "other_minds": {
+    "adult_humans": {
+      "reject": 0.2
+    },
+    "cats": {
+      "reject": 3.9
+    },
+    "fish": {
+      "reject": 14.7
+    },
+    "flies": {
+      "reject": 38.4
+    },
+    "worms": {
+      "reject": 46.6
+    },
+    "plants": {
+      "reject": 79.7
+    },
+    "particles": {
+      "reject": 89.1
+    },
+    "newborn_babies": {
+      "reject": 4.9
+    },
+    "current_ai_systems": {
+      "reject": 82.4
+    },
+    "future_ai_systems": {
+      "reject": 26.8
+    },
+    "other": 4.7
+  },
+  "philosophical_methods": {
+    "conceptual_analysis": {
+      "reject": 11.6
+    },
+    "conceptual_engineering": {
+      "reject": 20.6
+    },
+    "empirical_philosophy": {
+      "reject": 14.5
+    },
+    "experimental_philosophy": {
+      "reject": 35.9
+    },
+    "formal_philosophy": {
+      "reject": 12.9
+    },
+    "intuition_based_philosophy": {
+      "reject": 29.0
+    },
+    "linguistic_philosophy": {
+      "reject": 21.5
+    },
+    "other": 7.2
+  }
+}

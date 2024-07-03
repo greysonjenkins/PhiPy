@@ -1,8 +1,6 @@
 import streamlit as st
 import string
 
-st.set_page_config(page_title="Argument Outliner", layout="wide")
-
 # Custom CSS for styling
 st.markdown("""
 <style>
@@ -123,8 +121,7 @@ def create_argument():
 
     overall_conclusion = st.text_input("Overall Conclusion")
 
-    if st.button("Generate Argument Structure"):
-        st.write("Argument Structure:")
+    if st.button("Generate Argument Outline"):
         st.write("Overall Argument:")
         for i, arg in enumerate(main_arguments, 1):
             display_premise(arg, str(i), level=0)

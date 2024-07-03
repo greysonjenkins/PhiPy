@@ -20,7 +20,7 @@ class PredicateLogicParser:
 
     # Convert the input string into tree
     def text_to_tree(self, rules):
-       # rules = self.reorder_quantifiers(rules)
+        rules = self.reorder_quantifiers(rules)
 
         r, parsed_string = self.split(rules)
         cfg_string = self.make_cfg_string(r)
