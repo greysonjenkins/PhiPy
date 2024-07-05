@@ -1,6 +1,8 @@
 import re
-import nltk
 import sys
+
+import nltk
+
 
 class PredicateLogicParser:
     def __init__(self) -> None:

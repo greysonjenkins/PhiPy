@@ -1,5 +1,6 @@
-import streamlit as st
 import string
+
+import streamlit as st
 
 # Custom CSS for styling
 st.markdown("""

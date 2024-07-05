@@ -1,5 +1,7 @@
-import pandas as pd
+"""
 import json
+
+import pandas as pd
 
 # Load the JSON data
 with open('../data/philpapers-survey.json', 'r') as file:
@@ -36,3 +38,4 @@ df['Formatted Answers'] = df['Answers'].apply(format_answers)
 
 # Display the result
 print(df[['Question', 'Formatted Answers']])
+"""

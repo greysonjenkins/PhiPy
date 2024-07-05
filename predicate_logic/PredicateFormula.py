@@ -1,8 +1,8 @@
-from nltk.tree import Tree
-from predicate_logic_parser import PredicateLogicParser
-from concurrent.futures import ThreadPoolExecutor
 import signal
 import sys
+
+from predicate_logic_parser import PredicateLogicParser
+
 
 class PredicateFormula:
     def __init__(self, formula) -> None:
@@ -11,7 +11,7 @@ class PredicateFormula:
         def handler(signum, f):
             raise Exception("Error: Timed out")
 
-        # Set handler and 5-second limit
+        # Set handler and 60-second limit
         signal.signal(signal.SIGALRM, handler)
         signal.alarm(60)
         try:
