@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Tree Solver</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+    <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #sentence-input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        #sentences-container {
+            margin-top: 20px;
+        }
+        #tree-visualization {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Truth Tree Solver</h1>
+    <input type="text" id="sentence-input" placeholder="Enter a logical sentence:">
+    <h3>Operators: ∧ ∨ ¬ →</h3>
+    <button id="add-sentence">Add Sentence</button>
+    <button id="generate-tree">Generate Tree</button>
+    <div id="sentences-container"></div>
+    <div id="tree-visualization"></div>
+
+    <script>
+        const sentenceInput = document.getElementById('sentence-input');
+        const addSentenceBtn = document.getElementById('add-sentence');
+        const generateTreeBtn = document.getElementById('generate-tree');
+        const sentencesContainer = document.getElementById('sentences-container');
+        const treeVisualization = document.getElementById('tree-visualization');
+
+        const sentences = [];
+
+        addSentenceBtn.addEventListener('click', () => {
+            const sentence = sentenceInput.value.trim();
+            if (sentence) {
+                sentences.push(sentence);
+                const sentenceElement = document.createElement('div');
+                sentenceElement.textContent = sentence;
+                sentencesContainer.appendChild(sentenceElement);
+                sentenceInput.value = '';
+            }
+        });
+
+        generateTreeBtn.addEventListener('click', async () => {
+            if (sentences.length === 0) {
+                alert('Please add at least one sentence.');
+                return;
+            }
+
+            try {
+                const response = await fetch('/generate_tree', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ sentences }),
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert(`Error: ${data.error}`);
+                    return;
+                }
+
+                d3.select("#tree-visualization").graphviz()
+                    .renderDot(data.tree);
+
+            } catch (error) {
+                alert(`An error occurred: ${error.message}`);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,10 +1,11 @@
+# utils/parser.py
 from typing import List
 from utils.logic import Atom, Not, And, Or, Implies, Formula
 
-
 def tokenize(s: str) -> List[str]:
-    return s.replace('(', ' ( ').replace(')', ' ) ').split()
-
+    # Add space around parentheses and commas to tokenize properly
+    s = s.replace('(', ' ( ').replace(')', ' ) ').replace(',', ' , ')
+    return s.split()
 
 def parse(tokens: List[str]) -> Formula:
     if not tokens:
@@ -12,26 +13,27 @@ def parse(tokens: List[str]) -> Formula:
 
     token = tokens.pop(0)
     if token == '(':
-        op = tokens.pop(0)
+        raise ValueError("Unexpected '('")
+    elif token in ['and', 'or', 'implies', 'not']:
+        op = token
+        tokens.pop(0)  # Remove opening parenthesis
         if op == 'not':
             arg = parse(tokens)
             tokens.pop(0)  # Remove closing parenthesis
             return Not(arg)
-        elif op in ['and', 'or', 'implies']:
+        else:
             left = parse(tokens)
+            tokens.pop(0)  # Remove comma
             right = parse(tokens)
             tokens.pop(0)  # Remove closing parenthesis
             if op == 'and':
                 return And(left, right)
             elif op == 'or':
                 return Or(left, right)
-            else:
+            elif op == 'implies':
                 return Implies(left, right)
-        else:
-            raise ValueError(f"Unknown operator: {op}")
     else:
         return Atom(token)
-
 
 def parse_argument(s: str) -> Formula:
     tokens = tokenize(s)

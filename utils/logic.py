@@ -1,5 +1,6 @@
+# utils/logic.py
 from dataclasses import dataclass
-from typing import Union, List, Tuple
+from typing import Union
 
 @dataclass(frozen=True)
 class Atom:

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.logic-type {
+    margin-bottom: 20px;
+}
+
+.logic-type button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.logic-type button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.syntax-btn {
+    float: right;
+}
+
+#input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#sentence-input {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.symbols-container {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.symbols-container div {
+    margin-bottom: 10px;
+}
+
+.symbols-container button {
+    margin-right: 5px;
+}
+
+#sample-sentences {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#sentences-container {
+    margin-bottom: 20px;
+}
+
+#sentences-container div {
+    margin-bottom: 5px;
+}
+
+#tree-container {
+    margin-top: 30px;
+}
+
+#options-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#options-dialog.hidden {
+    display: none;
+}
+
+#tree-visualization {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}

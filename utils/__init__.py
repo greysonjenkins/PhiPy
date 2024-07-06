@@ -1,4 +1,5 @@
-from .logic import Formula, Atom, Not, And, Or, Implies
-from .parser import parse_argument
-from .truth_tree import generate_truth_tree, check_validity
-from .visualizer import visualize_tree
+# utils/__init__.py
+
+from .logic import Atom, Not, And, Or, Implies, Formula
+from .parser import tokenize, parse, parse_argument
+from .truth_tree import TreeNode, TruthTree, generate_truth_tree, expand_tree, mark_contradictions, print_truth_tree_graphviz, check_validity
